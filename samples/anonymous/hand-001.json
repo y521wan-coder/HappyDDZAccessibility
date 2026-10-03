@@ -1,0 +1,28 @@
+{
+  "status": "人工目视预标注，尚未双人复核，不可作为独立准确率测试集",
+  "source": "hand-raw.png",
+  "game_version": "8.057.106.17343",
+  "mode": "排位经典场",
+  "client_size": [1280, 720],
+  "hand_crop_origin": [255, 529],
+  "card_step_x": 41,
+  "cards_left_to_right": [
+    { "index": 1, "rank": "JOKER", "suit": null, "note": "大小王未区分" },
+    { "index": 2, "rank": "A", "suit": "spade" },
+    { "index": 3, "rank": "A", "suit": "heart" },
+    { "index": 4, "rank": "K", "suit": "heart" },
+    { "index": 5, "rank": "K", "suit": "club" },
+    { "index": 6, "rank": "J", "suit": "heart" },
+    { "index": 7, "rank": "J", "suit": "club" },
+    { "index": 8, "rank": "10", "suit": "diamond" },
+    { "index": 9, "rank": "9", "suit": "heart" },
+    { "index": 10, "rank": "8", "suit": "diamond" },
+    { "index": 11, "rank": "7", "suit": "heart" },
+    { "index": 12, "rank": "7", "suit": "club" },
+    { "index": 13, "rank": "7", "suit": "diamond" },
+    { "index": 14, "rank": "6", "suit": "diamond" },
+    { "index": 15, "rank": "5", "suit": "club" },
+    { "index": 16, "rank": "4", "suit": "club" },
+    { "index": 17, "rank": "4", "suit": "diamond" }
+  ]
+}

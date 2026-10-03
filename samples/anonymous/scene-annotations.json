@@ -1,0 +1,39 @@
+{
+  "status": "单次现场人工预标注，尚未构成独立测试集",
+  "game_version": "8.057.106.17343",
+  "entries": [
+    {
+      "file": "mode-grid.png",
+      "scene": "模式选择",
+      "visible_text": ["经典斗地主", "不洗牌斗地主", "欢乐经典"],
+      "allowed_action": "none"
+    },
+    {
+      "file": "room-grid.png",
+      "scene": "场次选择",
+      "visible_text": ["新手场", "初级场", "普通场"],
+      "allowed_action": "none",
+      "note": "底分和准入金币需单独读取与确认"
+    },
+    {
+      "file": "action-buttons.png",
+      "scene": "牌桌按钮区域",
+      "visible_text": ["出牌", "不出", "提示"],
+      "allowed_action": "none",
+      "note": "只有按钮区域，不能证明轮到本人"
+    },
+    {
+      "file": "timeout-dialog.png",
+      "scene": "超时弹窗",
+      "visible_text": ["提示", "太久没操作", "确定"],
+      "allowed_action": "none"
+    },
+    {
+      "file": "settlement-panel.png",
+      "scene": "结算",
+      "visible_text": ["胜利", "总分", "继续游戏"],
+      "allowed_action": "none",
+      "note": "继续游戏可能消耗游戏资源，不应自动点击"
+    }
+  ]
+}

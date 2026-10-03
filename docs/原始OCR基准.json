@@ -1,0 +1,119 @@
+{
+  "machine": "Intel Core i5-9400, CPU backend",
+  "image": "D:\\RapidV6_OCR\\benchmark_sample.png",
+  "image_size": [
+    1280,
+    720
+  ],
+  "method": "one warm-up plus three timed OCR calls per combination; median wall time; excludes model loading",
+  "records": [
+    {
+      "det": "tiny",
+      "rec": "tiny",
+      "median_ms": 149.6,
+      "runs_ms": [
+        155.4,
+        149.6,
+        147.9
+      ],
+      "text_chars": 185,
+      "lines": 8
+    },
+    {
+      "det": "tiny",
+      "rec": "small",
+      "median_ms": 224.0,
+      "runs_ms": [
+        219.0,
+        224.1,
+        224.0
+      ],
+      "text_chars": 189,
+      "lines": 8
+    },
+    {
+      "det": "tiny",
+      "rec": "medium",
+      "median_ms": 4004.4,
+      "runs_ms": [
+        4094.4,
+        4004.4,
+        3945.2
+      ],
+      "text_chars": 188,
+      "lines": 8
+    },
+    {
+      "det": "small",
+      "rec": "tiny",
+      "median_ms": 413.8,
+      "runs_ms": [
+        414.2,
+        411.3,
+        413.8
+      ],
+      "text_chars": 186,
+      "lines": 8
+    },
+    {
+      "det": "small",
+      "rec": "small",
+      "median_ms": 497.3,
+      "runs_ms": [
+        484.8,
+        497.3,
+        504.1
+      ],
+      "text_chars": 189,
+      "lines": 8
+    },
+    {
+      "det": "small",
+      "rec": "medium",
+      "median_ms": 4711.7,
+      "runs_ms": [
+        4694.1,
+        4751.1,
+        4711.7
+      ],
+      "text_chars": 188,
+      "lines": 8
+    },
+    {
+      "det": "medium",
+      "rec": "tiny",
+      "median_ms": 4240.6,
+      "runs_ms": [
+        4343.5,
+        4240.6,
+        4185.7
+      ],
+      "text_chars": 185,
+      "lines": 8
+    },
+    {
+      "det": "medium",
+      "rec": "small",
+      "median_ms": 4266.0,
+      "runs_ms": [
+        4266.0,
+        4259.8,
+        4301.7
+      ],
+      "text_chars": 189,
+      "lines": 8
+    },
+    {
+      "det": "medium",
+      "rec": "medium",
+      "median_ms": 8678.8,
+      "runs_ms": [
+        8752.1,
+        8550.4,
+        8678.8
+      ],
+      "text_chars": 188,
+      "lines": 8
+    }
+  ]
+}

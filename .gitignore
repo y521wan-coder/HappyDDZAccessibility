@@ -1,0 +1,43 @@
+# ===== 欢乐斗地主无障碍助手 : Git 忽略规则 =====
+# 说明：本仓库只发布可继续开发的源码、脚本、文档、模型与本机匿名样本。
+# 任何含账号、头像、昵称、密码、私密截图的目录都不得提交。
+
+# --- 编译输出与打包产物 ---
+src/**/bin/
+src/**/obj/
+tools/**/bin/
+tools/**/obj/
+native/bin/*.obj
+release/
+*.user
+*.suo
+*.log
+
+# --- 临时、缓存与诊断 ---
+cache/
+captures/
+__pycache__/
+*.tmp
+*.bak
+
+# --- 隐私样本（绝对禁止发布） ---
+samples/private/
+private/
+
+# --- 体积过大 / 与本机安装相关的目录，仅保留必要子集 ---
+RapidV6_OCR/
+Tencent/
+
+# --- RapidV6 第三方运行时：只保留本程序实际使用的 CPU/tiny 子集 ---
+vendor/RapidV6/resources/models/*
+!vendor/RapidV6/resources/models/PP-OCRv6_det_tiny.onnx
+!vendor/RapidV6/resources/models/PP-OCRv6_rec_tiny.onnx
+!vendor/RapidV6/resources/models/PP-LCNet_x1_0_textline_ori.onnx
+!vendor/RapidV6/resources/models/PP-LCNet_x1_0_doc_ori.onnx
+vendor/RapidV6/resources/runtime/*
+!vendor/RapidV6/resources/runtime/onnxruntime.dll
+!vendor/RapidV6/resources/runtime/onnxruntime_providers_shared.dll
+!vendor/RapidV6/resources/runtime/DirectML.dll
+!vendor/RapidV6/resources/runtime/msvcp140.dll
+!vendor/RapidV6/resources/runtime/vcruntime140.dll
+!vendor/RapidV6/resources/runtime/vcruntime140_1.dll

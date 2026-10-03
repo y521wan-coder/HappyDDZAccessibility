@@ -1,0 +1,5 @@
+{
+  "OcrBackend": "cpu",
+  "KeepScreenshots": false,
+  "AutoLoginWithQq": true
+}

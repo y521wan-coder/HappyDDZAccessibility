@@ -1,0 +1,1696 @@
+{
+  "project": "rapid",
+  "release": "2026-10-01",
+  "architecture": "windows-x64",
+  "schema_version": 1,
+  "build_inputs": {
+    "dependencies.lock.json": [
+      {
+        "name": "onnxruntime-source",
+        "url": "https://github.com/microsoft/onnxruntime/archive/refs/tags/v1.30.0.zip",
+        "sha256": "44fe58cbb7333601d505252dc37e53adeb899af703be43ace57e1f34e8844481"
+      },
+      {
+        "name": "onnxruntime-cuda",
+        "url": "https://github.com/microsoft/onnxruntime/releases/download/v1.30.0/onnxruntime-win-x64-gpu_cuda12-1.30.0.zip",
+        "sha256": "d4667ea48eb0a10bc9b96b838f7b8975a6bf18de3bc5edd403a22e15c1458b23"
+      },
+      {
+        "name": "opencv",
+        "url": "https://github.com/opencv/opencv/archive/refs/tags/4.14.0.zip",
+        "sha256": "831375584ff7a680cbb4efbb242cf949d14a37a3c37cb029c503672fe035abb6"
+      },
+      {
+        "name": "json",
+        "url": "https://github.com/nlohmann/json/archive/refs/tags/v3.12.0.zip",
+        "sha256": "34660b5e9a407195d55e8da705ed26cc6d175ce5a6b1fb957e701fb4d5b04022"
+      },
+      {
+        "name": "directml",
+        "url": "https://api.nuget.org/v3-flatcontainer/microsoft.ai.directml/1.15.4/microsoft.ai.directml.1.15.4.nupkg",
+        "sha256": "4e7cb7ddce8cf837a7a75dc029209b520ca0101470fcdf275c1f49736a3615b9"
+      }
+    ],
+    "cuda-dependencies.lock.json": [
+      {
+        "name": "nvidia-cuda-runtime-cu12",
+        "url": "https://files.pythonhosted.org/packages/30/a5/a515b7600ad361ea14bfa13fb4d6687abf500adc270f19e89849c0590492/nvidia_cuda_runtime_cu12-12.8.90-py3-none-win_amd64.whl",
+        "sha256": "c0c6027f01505bfed6c3b21ec546f69c687689aad5f1a377554bc6ca4aa993a8",
+        "version": "12.8.90"
+      },
+      {
+        "name": "nvidia-cublas-cu12",
+        "url": "https://files.pythonhosted.org/packages/70/61/7d7b3c70186fb651d0fbd35b01dbfc8e755f69fd58f817f3d0f642df20c3/nvidia_cublas_cu12-12.8.4.1-py3-none-win_amd64.whl",
+        "sha256": "47e9b82132fa8d2b4944e708049229601448aaad7e6f296f630f2d1a32de35af",
+        "version": "12.8.4.1"
+      },
+      {
+        "name": "nvidia-cudnn-cu12",
+        "url": "https://files.pythonhosted.org/packages/3d/90/0bd6e586701b3a890fd38aa71c387dab4883d619d6e5ad912ccbd05bfd67/nvidia_cudnn_cu12-9.10.2.21-py3-none-win_amd64.whl",
+        "sha256": "c6288de7d63e6cf62988f0923f96dc339cea362decb1bf5b3141883392a7d65e",
+        "version": "9.10.2.21"
+      },
+      {
+        "name": "nvidia-cuda-nvrtc-cu12",
+        "url": "https://files.pythonhosted.org/packages/45/51/52a3d84baa2136cc8df15500ad731d74d3a1114d4c123e043cb608d4a32b/nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-win_amd64.whl",
+        "sha256": "7a4b6b2904850fe78e0bd179c4b655c404d4bb799ef03ddc60804247099ae909",
+        "version": "12.8.93"
+      }
+    ],
+    "clipper.lock.json": [
+      {
+        "file": "clipper.cpp",
+        "url": "https://raw.githubusercontent.com/RapidAI/RapidOcrOnnx/abd498c13a6dbe5f3b3c0d421d72e01bb3e6ee6d/src/clipper.cpp",
+        "sha256": "956f0ade883476a611b954f3cd279c064ac0e7f2278abf5c3d21c9168a38a5c0"
+      },
+      {
+        "file": "clipper.hpp",
+        "url": "https://raw.githubusercontent.com/RapidAI/RapidOcrOnnx/abd498c13a6dbe5f3b3c0d421d72e01bb3e6ee6d/include/clipper.hpp",
+        "sha256": "a720bda40bbcd32f200e205699165b058d750b4eec73ccd9aba5f19a37ba296c"
+      }
+    ],
+    "licenses.lock.json": [
+      {
+        "file": "Clipper-BSL-1.0.txt",
+        "url": "https://www.boost.org/LICENSE_1_0.txt",
+        "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+      },
+      {
+        "file": "VisualStudio-Redist.txt",
+        "url": "https://aka.ms/vs/17/redist.txt",
+        "sha256": "926942f2462074733720867dbcc0ad5d4570ca68b5c4917e46b6ff492dfcc2eb"
+      },
+      {
+        "file": "VisualStudio-CRT.html",
+        "url": "https://visualstudio.microsoft.com/license-terms/vs2022-cruntime/",
+        "sha256": "4e315865c9a14c50176a8502388fae4f6f486d9957140a8b9a3fba0da353b46b"
+      },
+      {
+        "file": "VisualStudio-CRT.docx",
+        "url": "https://visualstudio.microsoft.com/wp-content/uploads/2021/09/Visual-C-Runtime-2015-2022-License-1.docx",
+        "sha256": "f1e3d56ceb2ad68aae0711b910375009e651ac5530fa0760f0dea6e81e54fae1"
+      }
+    ]
+  },
+  "models": [
+    {
+      "id": "PP-OCRv6_det_tiny",
+      "task": "det",
+      "file": "PP-OCRv6_det_tiny.onnx",
+      "sha256": "f42c0fbd294d95eac1a550e131b277dac97462c8025fa4b6c3cec1b7894bd3d5",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv6/det/PP-OCRv6_det_tiny.onnx",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "PP-OCRv6_det_small",
+      "task": "det",
+      "file": "PP-OCRv6_det_small.onnx",
+      "sha256": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv6/det/PP-OCRv6_det_small.onnx",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "PP-OCRv6_det_medium",
+      "task": "det",
+      "file": "PP-OCRv6_det_medium.onnx",
+      "sha256": "92078b7355007ccfffcd4c8cd441a3afd4538904d06881b29a155e1e679907c2",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv6/det/PP-OCRv6_det_medium.onnx",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "PP-OCRv6_rec_tiny",
+      "task": "rec",
+      "file": "PP-OCRv6_rec_tiny.onnx",
+      "sha256": "e16e242de5937ad92609223f19bc2aff3727ee40b095f996907c24749bad251b",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv6/rec/PP-OCRv6_rec_tiny.onnx",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "PP-OCRv6_rec_small",
+      "task": "rec",
+      "file": "PP-OCRv6_rec_small.onnx",
+      "sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv6/rec/PP-OCRv6_rec_small.onnx",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "PP-OCRv6_rec_medium",
+      "task": "rec",
+      "file": "PP-OCRv6_rec_medium.onnx",
+      "sha256": "eef444829dbbe18d7fea59a3f6eb75647518d2b3a9568d27c92e42940204894b",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv6/rec/PP-OCRv6_rec_medium.onnx",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "PP-DocLayoutV3",
+      "task": "layout",
+      "file": "pp_doc_layoutv3.onnx",
+      "sha256": "250dbad1dfb9e4983fab75e1bf5085cd56ec3f41d5c7d0f8623ec74856e7aa67",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidLayout/resolve/v1.2.0/onnx/pp_doc_layout/pp_doc_layoutv3.onnx",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "PP-LCNet_x1_0_doc_ori",
+      "task": "doc_ori",
+      "file": "PP-LCNet_x1_0_doc_ori.onnx",
+      "sha256": "af9a0a4f317ff0709ce752067807f819cb15d883f8ecad89f28df1c6ee2d9c92",
+      "url": "https://huggingface.co/PaddlePaddle/PP-LCNet_x1_0_doc_ori_onnx/resolve/7330ab7039123e46af2dc03154b9969aa412c61d/inference.onnx",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "PP-LCNet_x1_0_textline_ori",
+      "task": "line_ori",
+      "file": "PP-LCNet_x1_0_textline_ori.onnx",
+      "sha256": "38aa97cd4be591e0ad304e659f07ba30d946f27a63315433f6659c69c8778345",
+      "url": "https://huggingface.co/PaddlePaddle/PP-LCNet_x1_0_textline_ori_onnx/resolve/7fdcf3cf7061163eda7183b224aa334bd33068f7/inference.onnx",
+      "license": "Apache-2.0"
+    }
+  ],
+  "dependency_audit": {
+    "passed": true,
+    "architecture": "x64",
+    "scope": "PE imports and delay imports; dynamic providers also require inference tests",
+    "libraries": [
+      {
+        "file": "Rapid.dll",
+        "dependencies": {
+          "bcrypt.dll": "Windows System32",
+          "CRYPT32.dll": "Windows System32",
+          "dxgi.dll": "Windows System32",
+          "KERNEL32.dll": "Windows System32",
+          "ole32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/cublas64_12.dll",
+        "dependencies": {
+          "cublasLt64_12.dll": "bundled",
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/cublasLt64_12.dll",
+        "dependencies": {
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/cudart64_12.dll",
+        "dependencies": {
+          "api-ms-win-core-console-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-debug-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-errorhandling-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-file-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-handle-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-heap-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-interlocked-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-libraryloader-l1-2-0.dll": "Windows API set",
+          "api-ms-win-core-localization-l1-2-0.dll": "Windows API set",
+          "api-ms-win-core-processenvironment-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-processthreads-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-processthreads-l1-1-1.dll": "Windows API set",
+          "api-ms-win-core-profile-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-rtlsupport-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-string-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-synch-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-sysinfo-l1-1-0.dll": "Windows API set",
+          "api-ms-win-security-systemfunctions-l1-1-0.dll": "Windows API set"
+        }
+      },
+      {
+        "file": "resources/runtime/cudnn64_9.dll",
+        "dependencies": {
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/cudnn_adv64_9.dll",
+        "dependencies": {
+          "cudnn_graph64_9.dll": "bundled",
+          "cudnn_ops64_9.dll": "bundled",
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/cudnn_cnn64_9.dll",
+        "dependencies": {
+          "cudnn_graph64_9.dll": "bundled",
+          "cudnn_ops64_9.dll": "bundled",
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/cudnn_engines_precompiled64_9.dll",
+        "dependencies": {
+          "cudnn_graph64_9.dll": "bundled",
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/cudnn_engines_runtime_compiled64_9.dll",
+        "dependencies": {
+          "cudnn_graph64_9.dll": "bundled",
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/cudnn_graph64_9.dll",
+        "dependencies": {
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/cudnn_heuristic64_9.dll",
+        "dependencies": {
+          "cudnn_graph64_9.dll": "bundled",
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/cudnn_ops64_9.dll",
+        "dependencies": {
+          "cudnn_graph64_9.dll": "bundled",
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/DirectML.dll",
+        "dependencies": {
+          "api-ms-win-appmodel-runtime-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-console-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-datetime-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-debug-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-errorhandling-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-fibers-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-file-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-handle-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-heap-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-interlocked-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-libraryloader-l1-2-0.dll": "Windows API set",
+          "api-ms-win-core-libraryloader-l1-2-1.dll": "Windows API set",
+          "api-ms-win-core-localization-l1-2-0.dll": "Windows API set",
+          "api-ms-win-core-memory-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-processenvironment-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-processthreads-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-processthreads-l1-1-1.dll": "Windows API set",
+          "api-ms-win-core-profile-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-rtlsupport-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-string-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-synch-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-sysinfo-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-timezone-l1-1-0.dll": "Windows API set",
+          "api-ms-win-core-util-l1-1-0.dll": "Windows API set",
+          "api-ms-win-eventing-provider-l1-1-0.dll": "Windows API set",
+          "d3d12.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/msvcp140.dll",
+        "dependencies": {
+          "api-ms-win-crt-convert-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-environment-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-filesystem-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-heap-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-locale-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-math-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-runtime-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-stdio-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-string-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-time-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-utility-l1-1-0.dll": "Windows API set",
+          "KERNEL32.dll": "Windows System32",
+          "VCRUNTIME140.dll": "bundled",
+          "VCRUNTIME140_1.dll": "bundled"
+        }
+      },
+      {
+        "file": "resources/runtime/nvrtc-builtins64_128.dll",
+        "dependencies": {
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/nvrtc64_120_0.alt.dll",
+        "dependencies": {
+          "ADVAPI32.dll": "Windows System32",
+          "KERNEL32.dll": "Windows System32",
+          "ole32.dll": "Windows System32",
+          "SHELL32.dll": "Windows System32",
+          "USER32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/nvrtc64_120_0.dll",
+        "dependencies": {
+          "ADVAPI32.dll": "Windows System32",
+          "KERNEL32.dll": "Windows System32",
+          "ole32.dll": "Windows System32",
+          "SHELL32.dll": "Windows System32",
+          "USER32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/onnxruntime.dll",
+        "dependencies": {
+          "ADVAPI32.dll": "Windows System32",
+          "api-ms-win-core-path-l1-1-0.dll": "Windows API set",
+          "d3d12.dll": "Windows System32",
+          "dbghelp.dll": "Windows System32",
+          "DirectML.dll": "bundled",
+          "dxgi.dll": "Windows System32",
+          "KERNEL32.dll": "Windows System32",
+          "SETUPAPI.dll": "Windows System32",
+          "SHELL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/onnxruntime_providers_cuda.dll",
+        "dependencies": {
+          "api-ms-win-crt-convert-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-environment-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-filesystem-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-heap-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-locale-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-math-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-runtime-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-stdio-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-string-l1-1-0.dll": "Windows API set",
+          "cublas64_12.dll": "bundled",
+          "cublasLt64_12.dll": "bundled",
+          "cudart64_12.dll": "bundled",
+          "KERNEL32.dll": "Windows System32",
+          "MSVCP140.dll": "bundled",
+          "onnxruntime_providers_shared.dll": "bundled",
+          "VCRUNTIME140.dll": "bundled",
+          "VCRUNTIME140_1.dll": "bundled"
+        }
+      },
+      {
+        "file": "resources/runtime/onnxruntime_providers_shared.dll",
+        "dependencies": {
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/vcruntime140.dll",
+        "dependencies": {
+          "api-ms-win-crt-convert-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-heap-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-runtime-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-stdio-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-string-l1-1-0.dll": "Windows API set",
+          "KERNEL32.dll": "Windows System32"
+        }
+      },
+      {
+        "file": "resources/runtime/vcruntime140_1.dll",
+        "dependencies": {
+          "api-ms-win-crt-heap-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-runtime-l1-1-0.dll": "Windows API set",
+          "api-ms-win-crt-string-l1-1-0.dll": "Windows API set",
+          "KERNEL32.dll": "Windows System32",
+          "VCRUNTIME140.dll": "bundled"
+        }
+      }
+    ]
+  },
+  "test_reports": [
+    {
+      "file": "_build/reports/acceptance.json",
+      "sha256": "a7aac9ac7ec1529f947cdaf7a613efa664074dc7073dae7a3dde785199118c79"
+    },
+    {
+      "file": "_build/reports/analysis-gate.json",
+      "sha256": "aafef25943ad5dbbd9723e975b6fdb5889a8ac0ce9436e181446fd742c325f53"
+    },
+    {
+      "file": "_build/reports/dependency-audit.json",
+      "sha256": "1c61ad693b9cdf2bfc71efffefc72d25e2e30b36c5e1ed9a41e708b9d83a1107"
+    },
+    {
+      "file": "_build/reports/integration-cpu.json",
+      "sha256": "e4e1e10335fa2b93b29d4c6b9c36162905127158b23f2f72bf2ce61d39dca640"
+    },
+    {
+      "file": "_build/reports/integration-dml.json",
+      "sha256": "3463babe30c9c242b0e9ec8584f09e5dd832f73d45b89956e46457384e2a8521"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/acceptance.json",
+      "sha256": "a7aac9ac7ec1529f947cdaf7a613efa664074dc7073dae7a3dde785199118c79"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/build-gates.json",
+      "sha256": "acf64aa4afe8c009b90d3c8e23d31cea997aa5309efa329738e3ea8cd8c776ac"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/dependency-audit-diagnostic.json",
+      "sha256": "1c61ad693b9cdf2bfc71efffefc72d25e2e30b36c5e1ed9a41e708b9d83a1107"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/dependency-audit.json",
+      "sha256": "1c61ad693b9cdf2bfc71efffefc72d25e2e30b36c5e1ed9a41e708b9d83a1107"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/gpu-memory-amd.json",
+      "sha256": "7f87b1e435ec180b515a988a92c0280884d1fb3c6ff330a0652e4ac6cc6e0a70"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/gpu-memory-cpu.json",
+      "sha256": "14fcdfefebd7922f0f82c274062e971b9789769557beb176274c6dc3e1cfc679"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/gui-auto-batch.json",
+      "sha256": "8c2d42c88a2e7a371f449e32bd05a390e0be97ad598e51cf62db27232b3d8f8a"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/gui-driver-check.json",
+      "sha256": "eaa780d8a18043196906e2e9f79378b520a65e451abf9294213744e6529c1dc9"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/gui-driver-check2.json",
+      "sha256": "11a6ba69bbf39123485f147c0b2761e5b74e810f3e3daaa3586c897306ab69c7"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/host-security-modules.json",
+      "sha256": "f67dbcbb43991f2e4f023b5da51bbf3f547648996f38c73ce62e5dec791143cf"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/integration-amd.json",
+      "sha256": "ebb2f043d3d889299895f5ea27a41ccdc759de82dc7192700896d70373b3dd96"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/integration-cpu.json",
+      "sha256": "d1ac33f306696bca24cb047a373b3561758d25c6ae77c56348b2770d2963fcfb"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/gui-auto-batch.json",
+      "sha256": "8c2d42c88a2e7a371f449e32bd05a390e0be97ad598e51cf62db27232b3d8f8a"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/gui-auto-final.json",
+      "sha256": "5cfd71ee3594f1fc98530dc193f5edfba5b5a8a8f9883b206f7240ddeca79f71"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/gui-cpu.json",
+      "sha256": "fd69f3d9bd7103eff394cbc3830212f30fcc2ae0ec19b466dcb6aed2ba992370"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/host-security-modules.json",
+      "sha256": "f67dbcbb43991f2e4f023b5da51bbf3f547648996f38c73ce62e5dec791143cf"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/loaded-modules-intel.json",
+      "sha256": "b43f47e988e7acdbaa106845190b5ae4dc65f5d2c632de4c9fd2951fe542e4f5"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/native-auto.json",
+      "sha256": "7a98f5ec34e468361e85f3a4fc45f76bc98f1b334604f72d99e38515219f0090"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/native-cpu.json",
+      "sha256": "e4ad3b2b72139748afd275eed9e560efe395fcbfa8c5b9694a0594115c3a2add"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/native-module-audit.json",
+      "sha256": "f3cb5adc869acf6291c82ae951716f44eb77011c9d86610c0fec3eb0dc34152c"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/original-gui-retry.json",
+      "sha256": "8b54f4f6e177e7827e4ec7c24d711d8c7f92051e29c64a2ffe25eda84d4ae877"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/original-gui-retry2.json",
+      "sha256": "f284e31b6324e8452f41c49a433c8b271f15d3d33321a47b70010514479726b7"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/original-gui.json",
+      "sha256": "cfa7bc9eb77156674d34595b9a126127b5d1907c9482a200a1398eca85372d81"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/PP-LCNet_x1_0_doc_ori_2026-10-01_19-47-38_725.json",
+      "sha256": "8dd9e29f173426f0d121d399e9de489d248254606c3f610412563cc18e67bc3e"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/PP-LCNet_x1_0_textline_ori_2026-10-01_19-47-39_358.json",
+      "sha256": "00a31bed32ddf3a7220393e84341225a75a9c0000e1c8680a71383ffced3e0d6"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/PP-OCRv6_det_medium_2026-10-01_19-47-39_751.json",
+      "sha256": "4f146bbc461ec409df605b0d3fc323e3589435c60ba3f0d7e962e16cbc66a88a"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/PP-OCRv6_det_small_2026-10-01_19-47-40_391.json",
+      "sha256": "5a02b2835c03a76b539a7364ea90db6f81417835741f495c4ae026c032c7dc88"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/PP-OCRv6_det_tiny_2026-10-01_19-47-40_703.json",
+      "sha256": "7437cb43493082e55287a933bda08055d3ebdd72b03f8a71667f9f5e0106cde6"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/PP-OCRv6_rec_medium_2026-10-01_19-47-40_924.json",
+      "sha256": "3e869c46459c6f54004b0396c0fce9ca8defb81ee4963ba3bc77fe8633e146a6"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/PP-OCRv6_rec_small_2026-10-01_19-47-41_666.json",
+      "sha256": "147bf4e2cce89da5d9ec25285b306bf48abf950702b316079b594a505016fc20"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/PP-OCRv6_rec_tiny_2026-10-01_19-47-42_154.json",
+      "sha256": "4c624c106aaac27457808ebe986f5ddec5244634a5a6cd29afc76dbc4399ed57"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/intel/probe-reports/pp_doc_layoutv3_2026-10-01_19-47-42_332.json",
+      "sha256": "60780f9ffc11e17e75aca92a24e78d10abb5ce059feccfd99b55844c6472e131"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/investigation.json",
+      "sha256": "08b5d94dbdac750428e5c14550a67a44dd61d6e894294fb12d102c0296e31614"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/lifecycle-cpu.json",
+      "sha256": "e38fabcf23f2ddf50867caf9c62bfbf0a8ccc1b2230c553e6ec9f5b2f02cc0ac"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/lifecycle-dml.json",
+      "sha256": "aaf6fde2808d15089c424beec6f0a75c8358288c202c3222e01f78adbe2e9ce6"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/loaded-module-audit.json",
+      "sha256": "ba99fde6565b73b1ccb60565f0d210ee5a30720fd09549d83745385609d283f0"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/loaded-modules-intel.json",
+      "sha256": "b43f47e988e7acdbaa106845190b5ae4dc65f5d2c632de4c9fd2951fe542e4f5"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/local-acceptance.json",
+      "sha256": "be36ef53900af793a3075b2c7168fa7876da5a130108763f24cc7d09f9f2008a"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/memory-recovery-diagnostic.json",
+      "sha256": "8626f50925096d203982b5aa49994e8591bbc56dccc333b4f8666f92aa2bc377"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/memory-recovery.json",
+      "sha256": "870bda20dffa230e7940b2ab0af2919ac68010a124820636974473ee3e88db43"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/native-auto.json",
+      "sha256": "7a98f5ec34e468361e85f3a4fc45f76bc98f1b334604f72d99e38515219f0090"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/native-cpu-normalized.json",
+      "sha256": "1df3a67f4e010b0d2973ea8f62df7a87d7efd9aa98870d3871087bfe7095e4d0"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/native-cpu.json",
+      "sha256": "e4ad3b2b72139748afd275eed9e560efe395fcbfa8c5b9694a0594115c3a2add"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/native-module-audit.json",
+      "sha256": "f3cb5adc869acf6291c82ae951716f44eb77011c9d86610c0fec3eb0dc34152c"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-amd/probe-reports/PP-LCNet_x1_0_doc_ori_2026-10-01_19-46-36_025.json",
+      "sha256": "2dcd0e3b34c1b00aa2a85c4de05608f45a99e512770cc2fb9544cf6dc80c31c0"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-amd/probe-reports/PP-LCNet_x1_0_textline_ori_2026-10-01_19-46-36_181.json",
+      "sha256": "0f3c78756aae5776a9bf4c3f1582d5b190b32dbc1256ec7b5c3d4b4e9c7a09bf"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-amd/probe-reports/PP-OCRv6_det_medium_2026-10-01_19-46-36_333.json",
+      "sha256": "4e80ffee82fd4ea97540c0e7e0129261e8bffa5501346f4de6971f2e25a97231"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-amd/probe-reports/PP-OCRv6_det_small_2026-10-01_19-46-36_686.json",
+      "sha256": "b98e5fcc6442dbef22ab1ac3552ba4589dcddc6d6d904ed85778597a5f455c1f"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-amd/probe-reports/PP-OCRv6_det_tiny_2026-10-01_19-46-36_903.json",
+      "sha256": "aae516fe020fd2e32a7644982f34e308e1c5640cafe808798e97b61221bcbac9"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-amd/probe-reports/PP-OCRv6_rec_medium_2026-10-01_19-46-37_116.json",
+      "sha256": "80eb8e6ce7df026ad3dff3398fa147994d8ceed65a5485e26e605a8db5024882"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-amd/probe-reports/PP-OCRv6_rec_small_2026-10-01_19-46-37_473.json",
+      "sha256": "236a9ebbe8519376694351541b239b4918e9ca15d699cba319ad4cac6410b18c"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-amd/probe-reports/PP-OCRv6_rec_tiny_2026-10-01_19-46-37_748.json",
+      "sha256": "e37ab71121d7aef7a4dec4665b2887f5258cb40a05ad31c02b63e0b6e2c0cc7a"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-amd/probe-reports/pp_doc_layoutv3_2026-10-01_19-46-37_892.json",
+      "sha256": "9e765b5426f509a1afa93edd6ea32d224570c36aef3068fc5902db532b12b1fd"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-cpu/probe-reports/PP-LCNet_x1_0_doc_ori_2026-10-01_19-46-32_272.json",
+      "sha256": "78123deba07d4d097475b662d82c52462ae335b3de90573fb110b5a528f589f3"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-cpu/probe-reports/PP-LCNet_x1_0_textline_ori_2026-10-01_19-46-32_324.json",
+      "sha256": "a976af215a98bc6e4cc945e78300a887d7de809b74163bc4d9f8c82f1c5c8d80"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-cpu/probe-reports/PP-OCRv6_det_medium_2026-10-01_19-46-32_375.json",
+      "sha256": "0383b2d4f47635e4e649c92f5a2e434eb9c2135bc6951604ac1262bf47c253f4"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-cpu/probe-reports/PP-OCRv6_det_small_2026-10-01_19-46-32_625.json",
+      "sha256": "d62289885b4e6fdb5c648d9f747b26b041222c454f819c6dcacc93404097c918"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-cpu/probe-reports/PP-OCRv6_det_tiny_2026-10-01_19-46-32_744.json",
+      "sha256": "110a1c2f06d21c07a639a5b690ce8ec2cf69361db16554c879ebc5bcbfa08a45"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-cpu/probe-reports/PP-OCRv6_rec_medium_2026-10-01_19-46-32_821.json",
+      "sha256": "ae6e58aefe2d83c476ef8223e1919e9e4adbd0ffe9349a19ac718df9a7025f1b"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-cpu/probe-reports/PP-OCRv6_rec_small_2026-10-01_19-46-33_670.json",
+      "sha256": "1bd2760cf29d5ac9a63b2b688d1461e74740a7382f251be48a9066426a1570ac"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-cpu/probe-reports/PP-OCRv6_rec_tiny_2026-10-01_19-46-33_782.json",
+      "sha256": "a9eee2331e7ce70af2a71c4d84bf022d1fd7fe2d589e2622ec2f116b83484d77"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/profiling-cpu/probe-reports/pp_doc_layoutv3_2026-10-01_19-46-33_819.json",
+      "sha256": "62ef4588b60fe5aafd1d5a686aac7cad53274f5d5b040f739b3b7da17bc70bff"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/reference-regression.json",
+      "sha256": "04a1004e82c564e9f9c4452eac3f102a99ec88725f2854c365cd23aafd988325"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/variants-cpu.json",
+      "sha256": "69b10e81f76d5cd38ffc2162f5b620f43c31c9a6d464ba543a7aa9c14d36d3d8"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/variants-dml.json",
+      "sha256": "5c5f8cc24a6f65f6f58a0759e12a459ffe8be9312aece9bee7a72e65b40ff6ff"
+    },
+    {
+      "file": "_build/reports/intel-fix-20261001/worker-recovery.json",
+      "sha256": "b5769386cd1cd3135f81e0ffd0d33f6729daec6d97a76e7af0ba42f0aea636e9"
+    },
+    {
+      "file": "_build/reports/lifecycle-cpu.json",
+      "sha256": "7346d835e5c6d2c08b3d30dd8c3eaeec0e8b3dabcc2a907b3f04fcd20094d5a7"
+    },
+    {
+      "file": "_build/reports/lifecycle-dml.json",
+      "sha256": "6815470b10ec6b888b61f6e86fc2e36c3156d406da803c9502f13bc24c386e32"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/acceptance.json",
+      "sha256": "69856a252c35c43b3fd905eab776253d4deae4e07ce5f6d2b4dc1348e16d892a"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/archive-integrity.json",
+      "sha256": "283d31ca6f158786bfb937da94127cf81ab389dcd0533e5d197d11db37aa5dba"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/collector/medium-20260929-130548-e2b52aa8/collection.json",
+      "sha256": "a452c98ad4a77f357e987324a279d7e2e6ef58e7544902bc9e60f9e10a45745b"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/collector/medium-20260929-130548-e2b52aa8/environment.json",
+      "sha256": "40a01e2abc6d55250b83e998a467e3f41d85f08b262b2e4751b75414094d8149"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/collector/smoke.json",
+      "sha256": "6059c778fa1c2f2d6689a375a23b18f3df86763731b32ac241203485df5c25ed"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/dependency-audit.json",
+      "sha256": "1c61ad693b9cdf2bfc71efffefc72d25e2e30b36c5e1ed9a41e708b9d83a1107"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/diagnostic-dependency-audit.json",
+      "sha256": "1c61ad693b9cdf2bfc71efffefc72d25e2e30b36c5e1ed9a41e708b9d83a1107"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/diagnostic-integrity.json",
+      "sha256": "f5169c90a1c47f4c54cf66c05eb3523ae0899b08c17cba820c3eb70998749441"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/gui-full.json",
+      "sha256": "ffa6c50e456a2dfaf7237ff68102c856caa7b06b14aecb08f82ca6af3ddffff2"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/integration-cpu.json",
+      "sha256": "8eae71f3d41be30d2823f7f38775ba987b45ddf9500bbe9d91cb6316fee349b2"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/integration-dml.json",
+      "sha256": "165614d681887655e032818587e00709a5e1890bf1861d9dfbfd47b7ed3a3bb8"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/lifecycle-cpu.json",
+      "sha256": "e0ac4f85b7184154c12d887deff5cfe5b29e75e879b080284d541234747455e8"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/lifecycle-dml.json",
+      "sha256": "369bc6cadb85bfb59243dbc54afe850abab552d92c8e760391eb81107d963499"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/memory-diagnostic.json",
+      "sha256": "47683485cb2f2c12b857283f23559255eaf1c6047bdd042ce68d9bd2f7b773e3"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/memory-release.json",
+      "sha256": "70eb0e02c4023a2bb53bb0455f0ef095e08f2d3a8a8792add891e69a1b1f73db"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/procdump-native/result.json",
+      "sha256": "cf43105acef089bf0ff722108e731421870186e2b5f0ca67f6254745ffef5feb"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-cpu/probe-reports/PP-LCNet_x1_0_doc_ori_2026-09-29_13-01-40_320.json",
+      "sha256": "e0b881d5d927f5068547a87c4c5415b202c8508471f7ab4150f5daff04ab7b02"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-cpu/probe-reports/PP-LCNet_x1_0_textline_ori_2026-09-29_13-01-40_366.json",
+      "sha256": "126a99b073697234d3f1fc8b7a34d9e17622c76894e608d9cdbcd758ab4be0ec"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-cpu/probe-reports/PP-OCRv6_det_medium_2026-09-29_13-01-40_404.json",
+      "sha256": "eff385af83182004ffca44e97fd9bc84fa4785cfdb04ad1db96e2c74560fd325"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-cpu/probe-reports/PP-OCRv6_det_small_2026-09-29_13-01-40_602.json",
+      "sha256": "fe0740274a2d147f75cbd186ac3f18888e7357cf7332a74d2d27550013be539a"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-cpu/probe-reports/PP-OCRv6_det_tiny_2026-09-29_13-01-40_681.json",
+      "sha256": "075a72fe29803f164d02db43864d1616f713bf88faf6aa3b576abff5d6021551"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-cpu/probe-reports/PP-OCRv6_rec_medium_2026-09-29_13-01-40_736.json",
+      "sha256": "700f3234a07e4c6523d8206ce4d27aefcc859ef63d8131fdccfb0cb322c568b6"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-cpu/probe-reports/PP-OCRv6_rec_small_2026-09-29_13-01-41_583.json",
+      "sha256": "4cbc70be5b001496224daa46738d0b093cbb69504849d0b7b436a9216b258cc4"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-cpu/probe-reports/PP-OCRv6_rec_tiny_2026-09-29_13-01-41_691.json",
+      "sha256": "1066f2dc44eddd7dff775ffc01c04c6f441335ba955682da30176f6342268b9c"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-cpu/probe-reports/pp_doc_layoutv3_2026-09-29_13-01-41_724.json",
+      "sha256": "858ac899433ff1ad1fddb421b93047c185a29a40975918b94aa4c871ad25bb32"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-dml/probe-reports/PP-LCNet_x1_0_doc_ori_2026-09-29_13-01-43_771.json",
+      "sha256": "eda67d0b718331653c18421e8f7e157d4cec2788ce1e59bfc3b97cdb1631362a"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-dml/probe-reports/PP-LCNet_x1_0_textline_ori_2026-09-29_13-01-43_919.json",
+      "sha256": "e43c51cd8baafab5ce07c8e4dd0732de3f60805d69262a914b75d6e0c3619b5c"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-dml/probe-reports/PP-OCRv6_det_medium_2026-09-29_13-01-44_059.json",
+      "sha256": "a32bd2b750c75c402817dabbbcac9aa47f7177cb93e6020cc7ace27f92eaf170"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-dml/probe-reports/PP-OCRv6_det_small_2026-09-29_13-01-44_386.json",
+      "sha256": "d383267fdb14696d8438b6651905a22c1a956a9735663c42bc5da5b74623f88b"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-dml/probe-reports/PP-OCRv6_det_tiny_2026-09-29_13-01-44_599.json",
+      "sha256": "b0e1137f3659d8c558b44b6efc508f59aee54d18318959c206f54aa4e56e133d"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-dml/probe-reports/PP-OCRv6_rec_medium_2026-09-29_13-01-44_799.json",
+      "sha256": "14abd6c969be3c4ac05488aac38d066022dab1e20cfdbab9dd8ca0f7ffcededf"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-dml/probe-reports/PP-OCRv6_rec_small_2026-09-29_13-01-45_145.json",
+      "sha256": "de17ad99bbb7e07c2e8b3b96c0fa9c680807e58aca6f111839b85b20249e2052"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-dml/probe-reports/PP-OCRv6_rec_tiny_2026-09-29_13-01-45_408.json",
+      "sha256": "ea42074baa425875426bcbdaa1b7db73066582e7a3f3c2eb89a367bc51c88021"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/profile-dml/probe-reports/pp_doc_layoutv3_2026-09-29_13-01-45_555.json",
+      "sha256": "00a46663cf98d5851f43265c04d3ee66474b62d7c0799a02d8db40699cb6460e"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/python-example.json",
+      "sha256": "90c53da223d52430665c6adc06df33e8fe702e490b9d0611556925d686d23db4"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/python313-tool.json",
+      "sha256": "c2dabf41cb240106d926ebf6b4fce5dacb6bfddf35b99241e02908770835ab26"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/reference-agreement.json",
+      "sha256": "30d9416c01719a1f6e168a938bad704b33e103f7ebf8796352fefb47edc7fb30"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/release-integrity.json",
+      "sha256": "783b3ad9ff87f732ad455e9642bd155738d9a08e462f3075372416b0727015a1"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/release-no-trace.json",
+      "sha256": "140805f535d613976813b57b30fc1232ca02c8cede470ab813a4992c03877eaf"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/remote-validation.json",
+      "sha256": "a2bdb64ead2363f656fc342f709feb6a62de1f5d539ec8df5ded64796b8457be"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/variants-cpu.json",
+      "sha256": "e7b4f136120fc45be0310505c1f8d1b65e281b0a296b1919e09b6740fb62968c"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/variants-dml.json",
+      "sha256": "b8bf176ae397e284159259d29eb7b83b02d45c9ea5a79939680832c5f7ba41f2"
+    },
+    {
+      "file": "_build/reports/medium-fix-20260929/worker-recovery.json",
+      "sha256": "42268d419d70818f8d2179695cce8f86d54d860cd9768dd9f2bde335940271b9"
+    },
+    {
+      "file": "_build/reports/nvda-contract.json",
+      "sha256": "b411a740bdf755927b923a74b81391ad0e04f7c6c20cd2c6f2c2a333cddb00ff"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/failures.json",
+      "sha256": "e9d96aae57fce4c2119701ba235a4c8a3f5940b1ebc88a5bc17ca573e1ff87fb"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/fallback-dml-cuda.json",
+      "sha256": "4f5a13d36c33530b9bab63f684c498bf862a1aa253ed9d7f74d7f46621cd9f42"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/fallback-run.json",
+      "sha256": "81e14ecc0eba6b38c7f6bcf21c86c90686a69bef5fd3c5e0e5cdafa35cf92e4b"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/integration-cuda.json",
+      "sha256": "ce03ec7ee900f4b182d5868e57e376ba20f90402e87a86ca081deb3ce860f3d2"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/lifecycle-cuda.json",
+      "sha256": "8dad85a46824f20c72992056687c31a2729f1b123e8cf2013320275ebb9d8fb4"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/nvda-installed.json",
+      "sha256": "6bcc8f230effe06ea5251ce8edda41b962d50a584537780d5afcf58cc4f45a25"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-LCNet_x1_0_doc_ori_2026-09-20_20-02-56_040.json",
+      "sha256": "b4f05c5bcad048477956b68aa4d952699b5d9e3c0bce856c38ad6cb0a60cb355"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-LCNet_x1_0_doc_ori_2026-09-20_20-29-28_989.json",
+      "sha256": "f5d6e30869b04db6d6061bbb5d262f04c9564ed42141eadb861811651deed09f"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-LCNet_x1_0_textline_ori_2026-09-20_20-02-57_066.json",
+      "sha256": "8de99c09b90cbbef4c8af98890ebb492e0016fd5e311de9460a0ade6897d5ec6"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-LCNet_x1_0_textline_ori_2026-09-20_20-29-29_977.json",
+      "sha256": "51058f18f2ce8c772859ec8f77cc9d2a27355903cd6dc43af9ede000809940f7"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_det_medium_2026-09-20_20-02-58_242.json",
+      "sha256": "653e551fcd971986c4b44b1d7a6c84f7c4f7db7ce0668e9ffe387a947ce3f686"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_det_medium_2026-09-20_20-29-31_199.json",
+      "sha256": "258b195fe5f91586a65c1e7e7a4c39da277981a9efecd2b1bdd8399908c87a5a"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_det_small_2026-09-20_20-02-59_409.json",
+      "sha256": "9908fd6a6c6088ede72a4af20456e68b7dae5a43a06b6a03b64fadc2b44dcd90"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_det_small_2026-09-20_20-29-32_629.json",
+      "sha256": "d089093b8819c14be41510854b5df42fc6b0572bd8f810e63da23b8dfe50ecba"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_det_tiny_2026-09-20_20-03-01_807.json",
+      "sha256": "871df8d21bb9af0d6f08fcf5aabf8e00a915e18d87ee65c7bceef8b9fc8bcde2"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_det_tiny_2026-09-20_20-29-34_941.json",
+      "sha256": "0ea36e31763d27e39f2a88fc80fbb4c58008ac2979204b6d7cb10481207cb0b3"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_rec_medium_2026-09-20_20-03-04_647.json",
+      "sha256": "63d594f9e5e97a1f087f2acdb9bb389bcf20133bace3d1930a4334083e2febc6"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_rec_medium_2026-09-20_20-29-37_739.json",
+      "sha256": "96aa29add10674c78326a7721e9f7ca10d827b9c4c654c55f9d29467ede994d5"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_rec_small_2026-09-20_20-03-09_043.json",
+      "sha256": "56b908ddf14f0dc3343953afbec2d2e66514604cd098a4ef3181ecdbec2674b0"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_rec_small_2026-09-20_20-29-42_429.json",
+      "sha256": "e7a8d096e458270e32d0e2cd72fba0391c5995af059303a833379fd17cb3ecf1"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_rec_tiny_2026-09-20_20-03-13_022.json",
+      "sha256": "cf68f4727bf19e76957e4424c2c6f4a30f4742814901700e5329522f4ce3b4f6"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/PP-OCRv6_rec_tiny_2026-09-20_20-29-46_484.json",
+      "sha256": "54f1332ca06d6d5f04acb8cd3510be4a714cd1c93528e5eb41c38737f9023515"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/pp_doc_layoutv3_2026-09-20_20-03-14_973.json",
+      "sha256": "58e4238f8304f0dc3fd7125199605575f151a05552fcfd1c41ff9724fa136afe"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/pp_doc_layoutv3_2026-09-20_20-29-48_436.json",
+      "sha256": "e93792c8f4d343ed01af3226ca49a728fdb2b81d4d46cb5d0f2c45f2dbc99fa2"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/release-cuda.json",
+      "sha256": "0a28417ddf009a9c44a696a7ce3207bbca57397f1a3b26f49e4ef8cba6e17055"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/release-integrity-remote.json",
+      "sha256": "97988a6562467357f94e674a50d4a7b6fe7e68e5ce61e73ec913544064a16e0c"
+    },
+    {
+      "file": "_build/reports/rapid-20260920-8b7d969b/probe-reports/variants-cuda.json",
+      "sha256": "cfd9f1cfb2d35cd36d6e359cf455296589b043a57ab23f0025e821feaaa6f005"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/acceptance.json",
+      "sha256": "9db2363b9fdcb9f3244fd6fc7a880ca334f3fc1bc56c4a43477fc83882bcf2d3"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/fallback-cuda-dml.json",
+      "sha256": "81e14ecc0eba6b38c7f6bcf21c86c90686a69bef5fd3c5e0e5cdafa35cf92e4b"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/fallback-dml-cuda.json",
+      "sha256": "4f5a13d36c33530b9bab63f684c498bf862a1aa253ed9d7f74d7f46621cd9f42"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/integration-cuda.json",
+      "sha256": "ca334f9497c80461a66254b40c5fa590f19606d7959a6e939fe8ed8c7ee3c3bc"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/lifecycle-cuda.json",
+      "sha256": "43ac519e562c5fe7a9ba80961ba1e010781b3c2164b58af0335d19832a6eafdd"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/nvda/nvda-installed.json",
+      "sha256": "6bcc8f230effe06ea5251ce8edda41b962d50a584537780d5afcf58cc4f45a25"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/nvda-contract.json",
+      "sha256": "fad7b59c50ffe929a9b890cd51dbd6dbb2868549287679ad42ffd3ee932f7729"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/profile-cuda/probe-reports/PP-LCNet_x1_0_doc_ori_2026-09-29_13-10-24_043.json",
+      "sha256": "937b0ac828567436f45a821feddf1c1f694ad8550730f3283c99dc1cc900c7e1"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/profile-cuda/probe-reports/PP-LCNet_x1_0_textline_ori_2026-09-29_13-10-25_025.json",
+      "sha256": "19ad501068715b9a87ff528804fcfa6988766a07a5a9162def2408008f9378f8"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/profile-cuda/probe-reports/PP-OCRv6_det_medium_2026-09-29_13-10-26_190.json",
+      "sha256": "5bdab8335b257bdf1cc9fe65d6804c48b27f3593684141ee79318d30f02b0099"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/profile-cuda/probe-reports/PP-OCRv6_det_small_2026-09-29_13-10-27_445.json",
+      "sha256": "2cc0ed3e71cc36aca24706457ef774965c156674bcdb253f553e9c790bfc60a9"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/profile-cuda/probe-reports/PP-OCRv6_det_tiny_2026-09-29_13-10-29_853.json",
+      "sha256": "49d21504d9459284cc691aa86fd4f5ccf5123b937bc2369e6ef13bed20b2ef89"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/profile-cuda/probe-reports/PP-OCRv6_rec_medium_2026-09-29_13-10-32_740.json",
+      "sha256": "dfd4e60493fa38967691bc706a6d27d8f3adf4695d26ed41c0dbf0ef84024f53"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/profile-cuda/probe-reports/PP-OCRv6_rec_small_2026-09-29_13-10-37_212.json",
+      "sha256": "872ef6115110c7669025eec8f1085431b571e7e79f870e2042c77469e1e23973"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/profile-cuda/probe-reports/PP-OCRv6_rec_tiny_2026-09-29_13-10-41_151.json",
+      "sha256": "8a9311fd453c52a137e7f2642ed763b4c64235f1803aa020dec0a258b7c1cec4"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/profile-cuda/probe-reports/pp_doc_layoutv3_2026-09-29_13-10-43_025.json",
+      "sha256": "186f17f48b4aba836eb19a6440e1a4d064fcdc59bf793e9567cd580e123c0301"
+    },
+    {
+      "file": "_build/reports/rapid-20260929-d54faf7f/probe-reports/variants-cuda.json",
+      "sha256": "cfd9f1cfb2d35cd36d6e359cf455296589b043a57ab23f0025e821feaaa6f005"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/acceptance.json",
+      "sha256": "72c69ff775e524ff268b57db2a27c2f8ed62d636fe1a459177f29ac1ed251808"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/failures.json",
+      "sha256": "e9d96aae57fce4c2119701ba235a4c8a3f5940b1ebc88a5bc17ca573e1ff87fb"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/fallback-cuda-dml.json",
+      "sha256": "e82194c8b56019eff0d3233ac6b0013dd1ef58b92987c76bd9e2991cfd5fed0b"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/fallback-dml-cuda.json",
+      "sha256": "b97c070b2e79ebbb8ef2e45c5398e555df4fc18a380a5fe647e9636a99a900bc"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/gpu-memory-cuda.json",
+      "sha256": "6a1e597fa703dee2a08b3a2b44b3786707a5fa0050fa0f5636ac5fb185298a65"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/growth-cuda-limitation.json",
+      "sha256": "724376bca8c2f40e28478e3c15351b8ac53c585f875c2ab7f66949d9dd91ddb3"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/integration-cuda.json",
+      "sha256": "abf9a61ded6f5fb9fa1d6d58c48e9cbf6817c4f9a674f651dd968d591b2ce8b7"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/lifecycle-cuda.json",
+      "sha256": "7823afa31038facaf7aeaf6714d0cf60414bd7a62825abd7f03fe03a610be47e"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/loaded-modules-cuda.json",
+      "sha256": "f5894ac234c1434e59298037d64bc9a871d458f93e477800140d90ffad2c0042"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/nvda/nvda-installed.json",
+      "sha256": "6bcc8f230effe06ea5251ce8edda41b962d50a584537780d5afcf58cc4f45a25"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/nvda-contract.json",
+      "sha256": "fad7b59c50ffe929a9b890cd51dbd6dbb2868549287679ad42ffd3ee932f7729"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/PP-LCNet_x1_0_doc_ori_2026-10-01_19-54-56_588.json",
+      "sha256": "78cc1843ad62e5ed5148fb9e66bcba5201562766c290ca0c18f88e2168ebe2d2"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/PP-LCNet_x1_0_textline_ori_2026-10-01_19-54-57_483.json",
+      "sha256": "9449b9ee39b4ab5882fe3ac61ae5f805d97c1e0fb24d51b1314832e271f2f807"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/PP-OCRv6_det_medium_2026-10-01_19-54-58_597.json",
+      "sha256": "eab735aa7b987d6420dfda430a2aa476acaab215f5a4a9da271b2a1d935eab69"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/PP-OCRv6_det_small_2026-10-01_19-54-59_691.json",
+      "sha256": "87891031caeab1a15a8e5e78f6c0606c157488c9cf4d0ae5db77410d71e77db7"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/PP-OCRv6_det_tiny_2026-10-01_19-55-01_924.json",
+      "sha256": "0b9e46e1f169f8ae92eb0ed8e9bd1d338eeaec672e2cc27d4c69943c12ffc01f"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/PP-OCRv6_rec_medium_2026-10-01_19-55-04_630.json",
+      "sha256": "7a11586dc98fd621f5bcc2b1de0145eb772c775ee2070b141433691934078ac5"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/PP-OCRv6_rec_small_2026-10-01_19-55-08_839.json",
+      "sha256": "53a1720dfdd67ea0ac01c61748ad45462290e5c162e5e4e5a3b4557d2505326e"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/PP-OCRv6_rec_tiny_2026-10-01_19-55-12_627.json",
+      "sha256": "a31eb3c233892c756a6c7bf761150483097f332b0248a4fef975f3154f2893bd"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/pp_doc_layoutv3_2026-10-01_19-55-14_495.json",
+      "sha256": "a967527c9bbde78c030ac06a9f316a89aeb78bbb97e91033271a37f580911bb0"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/required-acceptance.json",
+      "sha256": "1b7a31aa3841619aa18188505292dc1a278824db6dc388151433fed1c7998402"
+    },
+    {
+      "file": "_build/reports/rapid-20261001-6fba6e59/probe-reports/variants-cuda.json",
+      "sha256": "8cf0f40245c36ca23f0271203fe37079cb26ea830c753cb1f1dab4fd3ca3ba74"
+    },
+    {
+      "file": "_build/reports/reference.json",
+      "sha256": "84cc8b01bd7a95e60a2984cd6614d1f908373370f992b459c69eca500bf06f6f"
+    },
+    {
+      "file": "_build/reports/release-cpu.json",
+      "sha256": "fc5353d608e13cb1564ee767b163a437c9639d7e46180aaef51e9d90ba6bc7cb"
+    },
+    {
+      "file": "_build/reports/release-dml.json",
+      "sha256": "3a5429bb61b8cb99b87380a01b3ea4e26382ba58cf9a3514fa99780dc91921da"
+    },
+    {
+      "file": "_build/reports/release-integrity-final.json",
+      "sha256": "c4a5f1ef29467f0120ea416d8ab9a0784b179e54b86d104381f8b6e837a874ed"
+    },
+    {
+      "file": "_build/reports/release-integrity-local.json",
+      "sha256": "97988a6562467357f94e674a50d4a7b6fe7e68e5ce61e73ec913544064a16e0c"
+    },
+    {
+      "file": "_build/reports/variants-cpu.json",
+      "sha256": "e7b4f136120fc45be0310505c1f8d1b65e281b0a296b1919e09b6740fb62968c"
+    },
+    {
+      "file": "_build/reports/variants-dml.json",
+      "sha256": "b8bf176ae397e284159259d29eb7b83b02d45c9ea5a79939680832c5f7ba41f2"
+    }
+  ],
+  "validation_limits": [
+    "NVDA framework shell contract test; no live UI test",
+    "Intel UMA compatibility policy is broader than the tested Arc 130T; other Intel models/drivers remain unverified",
+    "CUDA dynamic-width stress stopped after 240 completed iterations due to repeated NVRTC compilation; the 1200-iteration CUDA stress test is unverified",
+    "Other GPUs/drivers not tested"
+  ],
+  "files": [
+    {
+      "file": "Rapid.dll",
+      "bytes": 5934592,
+      "sha256": "6217d6f258e51575f2ba9a24bf6818a02222bbd502e42bd2d463ce4b2f46f367"
+    },
+    {
+      "file": "rapid.h",
+      "bytes": 2430,
+      "sha256": "a25d6772f1401a9db1a7b9892c62182612c896b17d2a798f9cb21bb4731a0964"
+    },
+    {
+      "file": "resources/licenses/abseil_cpp-LICENSE.txt",
+      "bytes": 11361,
+      "sha256": "c79a7fea0e3cac04cd43f20e7b648e5a0ff8fa5344e644b0ee09ca1162b62747"
+    },
+    {
+      "file": "resources/licenses/Clipper-BSL-1.0.txt",
+      "bytes": 1338,
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    {
+      "file": "resources/licenses/date-LICENSE.txt.txt",
+      "bytes": 1637,
+      "sha256": "c90f6c00fb961170560299cbda28ca2d45804913aa8b2a9f36dbb8e0028d6930"
+    },
+    {
+      "file": "resources/licenses/DirectML-LICENSE-CODE.txt",
+      "bytes": 1093,
+      "sha256": "903df5512f7d02609fed0c780a9b704f5a3eeb6e4d84ebe42a29845c81899a3c"
+    },
+    {
+      "file": "resources/licenses/DirectML-LICENSE.txt",
+      "bytes": 10439,
+      "sha256": "a05138e3a085ff60a44881eedfa58dccb03ecc1d7b1f6ae888418e8c2fec4b8d"
+    },
+    {
+      "file": "resources/licenses/DirectML-ThirdPartyNotices.txt",
+      "bytes": 4577,
+      "sha256": "2c95795c13ff48a58b6ed916f37901c23d964b5d9d601af422f17ad2172e7950"
+    },
+    {
+      "file": "resources/licenses/directx_headers-LICENSE.txt",
+      "bytes": 1093,
+      "sha256": "903df5512f7d02609fed0c780a9b704f5a3eeb6e4d84ebe42a29845c81899a3c"
+    },
+    {
+      "file": "resources/licenses/eigen3-COPYING.APACHE.txt",
+      "bytes": 11362,
+      "sha256": "03379001a7b12a2ec997a25554247d985270b353c10d5bafee9ac8d6519820b7"
+    },
+    {
+      "file": "resources/licenses/eigen3-COPYING.BSD.txt",
+      "bytes": 1517,
+      "sha256": "51928dce36213c5333ba3172e847d735d4c6e9b7ff2722a326c49067155b82eb"
+    },
+    {
+      "file": "resources/licenses/eigen3-COPYING.MINPACK.txt",
+      "bytes": 2193,
+      "sha256": "c87b7f8ee88f6195e91743820c00354833583aef091b72e2d4a49c8e28e798a0"
+    },
+    {
+      "file": "resources/licenses/eigen3-COPYING.MPL2.txt",
+      "bytes": 16727,
+      "sha256": "66a3107d5ad6a058aab753eaac2047ccb2ed0e39465dd0fe5844da3e300d5172"
+    },
+    {
+      "file": "resources/licenses/eigen3-COPYING.README.txt",
+      "bytes": 264,
+      "sha256": "db640ff2bd90c6abd6a4d3fbb351e0ee4d555417cf840492054d1cbb2ea85644"
+    },
+    {
+      "file": "resources/licenses/eigen3-LICENSE.txt",
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    {
+      "file": "resources/licenses/flatbuffers-LICENSE.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "resources/licenses/gsl-LICENSE.txt",
+      "bytes": 1157,
+      "sha256": "4c21dc82a1c7186ea754fd59d504c00947953a3401fe8e24eaa44109ef8e2555"
+    },
+    {
+      "file": "resources/licenses/gsl-ThirdPartyNotices.txt.txt",
+      "bytes": 2022,
+      "sha256": "691d94413053d5bda219c05f57739192b30c171db0925f3722604fe06f865d3b"
+    },
+    {
+      "file": "resources/licenses/libjpeg-IJG.txt",
+      "bytes": 12799,
+      "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6"
+    },
+    {
+      "file": "resources/licenses/libjpeg-turbo.txt",
+      "bytes": 5620,
+      "sha256": "96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430"
+    },
+    {
+      "file": "resources/licenses/libpng.txt",
+      "bytes": 5345,
+      "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+    },
+    {
+      "file": "resources/licenses/microsoft_wil-LICENSE.txt",
+      "bytes": 1162,
+      "sha256": "27ebda9d51f0a56b7e281ccd8230a27236dcb51c05f64b07869ecf6e965d68b0"
+    },
+    {
+      "file": "resources/licenses/microsoft_wil-ThirdPartyNotices.txt.txt",
+      "bytes": 4248,
+      "sha256": "32403680d9c8b4a4c68c0bf650090dcfc063f99ad8a37d7ff84e00d9709a518f"
+    },
+    {
+      "file": "resources/licenses/nlohmann-json-MIT.txt",
+      "bytes": 1076,
+      "sha256": "46a65cffd1ea955132d95a8dd921640714a8d6b537d2e4e482d31145ae95b603"
+    },
+    {
+      "file": "resources/licenses/nlohmann_json-LICENSE.MIT.txt",
+      "bytes": 1076,
+      "sha256": "86b998c792894ccb911a1cb7994f7a9652894e7a094c0b5e45be2f553f45cf14"
+    },
+    {
+      "file": "resources/licenses/nvidia-cublas-cu12.txt",
+      "bytes": 59262,
+      "sha256": "ad6f5853fba0ca0d159d0f58d49ae49830c2f8c93f7a92648b9ce90adb4c6ccd"
+    },
+    {
+      "file": "resources/licenses/nvidia-cuda-nvrtc-cu12.txt",
+      "bytes": 59262,
+      "sha256": "ad6f5853fba0ca0d159d0f58d49ae49830c2f8c93f7a92648b9ce90adb4c6ccd"
+    },
+    {
+      "file": "resources/licenses/nvidia-cuda-runtime-cu12.txt",
+      "bytes": 59262,
+      "sha256": "ad6f5853fba0ca0d159d0f58d49ae49830c2f8c93f7a92648b9ce90adb4c6ccd"
+    },
+    {
+      "file": "resources/licenses/nvidia-cudnn-cu12.txt",
+      "bytes": 18174,
+      "sha256": "49cf79bdb35734b52fe6203013b3bd759f81e998cd32aa2c65c51db9a88c61d2"
+    },
+    {
+      "file": "resources/licenses/onnx-LICENSE.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "resources/licenses/ONNX-Runtime-CUDA-ThirdPartyNotices.txt",
+      "bytes": 344457,
+      "sha256": "c53a76501ef60db6f865f20599f220761201ac4057683acefdab37d861b86622"
+    },
+    {
+      "file": "resources/licenses/ONNX-Runtime-MIT.txt",
+      "bytes": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    {
+      "file": "resources/licenses/ONNX-Runtime-ThirdPartyNotices.txt",
+      "bytes": 338088,
+      "sha256": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3"
+    },
+    {
+      "file": "resources/licenses/OpenCV-Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "resources/licenses/OpenCV-BSD.txt",
+      "bytes": 2294,
+      "sha256": "a5a7cf90fe5ac9763baad852cf69cf9d9b89bff934a679fdc5c8fcecaeba9a25"
+    },
+    {
+      "file": "resources/licenses/OpenCV-LicenseChange.txt",
+      "bytes": 2768,
+      "sha256": "b2255f81ae7162e36550daefe432c72a8506cfc1b954897dbc553ed5160ad4b8"
+    },
+    {
+      "file": "resources/licenses/OpenCV-SoftFloat.txt",
+      "bytes": 1732,
+      "sha256": "0c5b08365136da52639d777f1ebfc03988b0169d80655c90c59f1b3fa3e526a2"
+    },
+    {
+      "file": "resources/licenses/protobuf-LICENSE.txt",
+      "bytes": 1732,
+      "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d"
+    },
+    {
+      "file": "resources/licenses/pytorch_cpuinfo-LICENSE.txt",
+      "bytes": 1424,
+      "sha256": "8e7e60636c3aa0cb03571a1a841ce5697f9551ff92b3c426c2561613d15ade70"
+    },
+    {
+      "file": "resources/licenses/RapidOCR-Apache-2.0.txt",
+      "bytes": 11625,
+      "sha256": "7125666e36cb851720619dcf28632c46dcc02a4b9b88f2df1ea43fdb00ccbce3"
+    },
+    {
+      "file": "resources/licenses/re2-LICENSE.txt",
+      "bytes": 1558,
+      "sha256": "6040cda75d90b1738292a631d89934c411ef7ffd543c4d6a1b7edfc8edf29449"
+    },
+    {
+      "file": "resources/licenses/safeint-LICENSE.txt",
+      "bytes": 1066,
+      "sha256": "a46919cc8f01eb73f6e4b84af0d41b46b2a33b87c74e864279ef585079f82da4"
+    },
+    {
+      "file": "resources/licenses/sources.md",
+      "bytes": 1066,
+      "sha256": "4684a5549ff5ac65e50a3080950dfdc1bc8e3e5e07d4f99cb53bb21af3466cf8"
+    },
+    {
+      "file": "resources/licenses/VisualStudio-CRT.docx",
+      "bytes": 39644,
+      "sha256": "f1e3d56ceb2ad68aae0711b910375009e651ac5530fa0760f0dea6e81e54fae1"
+    },
+    {
+      "file": "resources/licenses/VisualStudio-CRT.html",
+      "bytes": 236157,
+      "sha256": "4e315865c9a14c50176a8502388fae4f6f486d9957140a8b9a3fba0da353b46b"
+    },
+    {
+      "file": "resources/licenses/VisualStudio-Redist.html",
+      "bytes": 62589,
+      "sha256": "926942f2462074733720867dbcc0ad5d4570ca68b5c4917e46b6ff492dfcc2eb"
+    },
+    {
+      "file": "resources/licenses/zlib.txt",
+      "bytes": 1002,
+      "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2"
+    },
+    {
+      "file": "resources/models/PP-LCNet_x1_0_doc_ori.onnx",
+      "bytes": 6788069,
+      "sha256": "af9a0a4f317ff0709ce752067807f819cb15d883f8ecad89f28df1c6ee2d9c92"
+    },
+    {
+      "file": "resources/models/PP-LCNet_x1_0_textline_ori.onnx",
+      "bytes": 6777816,
+      "sha256": "38aa97cd4be591e0ad304e659f07ba30d946f27a63315433f6659c69c8778345"
+    },
+    {
+      "file": "resources/models/PP-OCRv6_det_medium.onnx",
+      "bytes": 62119454,
+      "sha256": "92078b7355007ccfffcd4c8cd441a3afd4538904d06881b29a155e1e679907c2"
+    },
+    {
+      "file": "resources/models/PP-OCRv6_det_small.onnx",
+      "bytes": 9929594,
+      "sha256": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f"
+    },
+    {
+      "file": "resources/models/PP-OCRv6_det_tiny.onnx",
+      "bytes": 1829618,
+      "sha256": "f42c0fbd294d95eac1a550e131b277dac97462c8025fa4b6c3cec1b7894bd3d5"
+    },
+    {
+      "file": "resources/models/PP-OCRv6_rec_medium.onnx",
+      "bytes": 76629984,
+      "sha256": "eef444829dbbe18d7fea59a3f6eb75647518d2b3a9568d27c92e42940204894b"
+    },
+    {
+      "file": "resources/models/PP-OCRv6_rec_small.onnx",
+      "bytes": 21234383,
+      "sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884"
+    },
+    {
+      "file": "resources/models/PP-OCRv6_rec_tiny.onnx",
+      "bytes": 4489813,
+      "sha256": "e16e242de5937ad92609223f19bc2aff3727ee40b095f996907c24749bad251b"
+    },
+    {
+      "file": "resources/models/pp_doc_layoutv3.onnx",
+      "bytes": 130502330,
+      "sha256": "250dbad1dfb9e4983fab75e1bf5085cd56ec3f41d5c7d0f8623ec74856e7aa67"
+    },
+    {
+      "file": "resources/models.json",
+      "bytes": 2695,
+      "sha256": "a9290492e6042c7a5eae1b912026e10c856edae54638f710824042d4e58f5e99"
+    },
+    {
+      "file": "resources/runtime/cublas64_12.dll",
+      "bytes": 113716224,
+      "sha256": "9513540e4ec4c51ee9e7304138c2cc255c29a8c181f9e80c38efa25738becd99"
+    },
+    {
+      "file": "resources/runtime/cublasLt64_12.dll",
+      "bytes": 674667520,
+      "sha256": "b199d1ff892a81b7fd3d57ba1781549609b41500b36008fef326038393ad46c7"
+    },
+    {
+      "file": "resources/runtime/cudart64_12.dll",
+      "bytes": 573952,
+      "sha256": "c2c9a9c22a9bcba90e261825968836787b331038047a26770cffb7a583c28344"
+    },
+    {
+      "file": "resources/runtime/cudnn64_9.dll",
+      "bytes": 266288,
+      "sha256": "9edbcdff73b0af070eb160b2ce66e59feca04aa017351d8eedcc5e8e149967d2"
+    },
+    {
+      "file": "resources/runtime/cudnn_adv64_9.dll",
+      "bytes": 282445872,
+      "sha256": "f202e8ff36209ac4292fe2ef79d4539487495b3b948f0c978cc63298f43a1850"
+    },
+    {
+      "file": "resources/runtime/cudnn_cnn64_9.dll",
+      "bytes": 4618272,
+      "sha256": "3f03dec3b81f137f049e1d1c06ff469248eef54ff9424b3b9045fc0f69559d1a"
+    },
+    {
+      "file": "resources/runtime/cudnn_engines_precompiled64_9.dll",
+      "bytes": 513926688,
+      "sha256": "ebc2c1f74366b029a4350f7f9a3b109ccd5aa9b4ae02527950793dd29f7b74fb"
+    },
+    {
+      "file": "resources/runtime/cudnn_engines_runtime_compiled64_9.dll",
+      "bytes": 20201008,
+      "sha256": "93ab6351ca0f2b6ca842f83d284e56c427525778c14657229801a13cf8121bd8"
+    },
+    {
+      "file": "resources/runtime/cudnn_graph64_9.dll",
+      "bytes": 2420256,
+      "sha256": "a933efeb280a3252297f92d79f7e83003bcbc6f665872d11645d1dbbab9cb598"
+    },
+    {
+      "file": "resources/runtime/cudnn_heuristic64_9.dll",
+      "bytes": 56823328,
+      "sha256": "458175f12771a35de0ea39c04250d727c2424d42a7ffe0bc987ae81204748fba"
+    },
+    {
+      "file": "resources/runtime/cudnn_ops64_9.dll",
+      "bytes": 126508576,
+      "sha256": "851d8f4191a24b322b0be738d191a3159455f0da4db47a19f5cc7ad6e55edf61"
+    },
+    {
+      "file": "resources/runtime/DirectML.dll",
+      "bytes": 18527776,
+      "sha256": "9c9e6d822561c6c41b90e6994b3e8857cf1d66dbfb1e0c4c799c7c89b4e92da1"
+    },
+    {
+      "file": "resources/runtime/manifest.json",
+      "bytes": 3230,
+      "sha256": "e49234eb5e491beea07c639f8f765f7c36de1ae9ecd03c4046897ca9b2ffc87c"
+    },
+    {
+      "file": "resources/runtime/msvcp140.dll",
+      "bytes": 557728,
+      "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9"
+    },
+    {
+      "file": "resources/runtime/nvrtc-builtins64_128.dll",
+      "bytes": 6356480,
+      "sha256": "a7afa2a40cbd3f922a33d8bf71c13cb26ca707c7016a9bc5fcde36759ba668f5"
+    },
+    {
+      "file": "resources/runtime/nvrtc64_120_0.alt.dll",
+      "bytes": 86794240,
+      "sha256": "5464ea01b079d78042374dc7819684910c8e9d5c63000e2d2d5aa02298ecf2ae"
+    },
+    {
+      "file": "resources/runtime/nvrtc64_120_0.dll",
+      "bytes": 86728192,
+      "sha256": "02d2d7ef4690bf1a55dda1d3ac94c86ce8d16920071c87bcd3e70e94ef346e93"
+    },
+    {
+      "file": "resources/runtime/onnxruntime.dll",
+      "bytes": 21064192,
+      "sha256": "288b22300386e6bd871b699c2daae27d57df5bfda8d4737c40c3cfbfc8faff72"
+    },
+    {
+      "file": "resources/runtime/onnxruntime_providers_cuda.dll",
+      "bytes": 352453432,
+      "sha256": "7b2912285467f4590ab12c39598f4d8844a68ad024e5b36b036b7a4f184d2463"
+    },
+    {
+      "file": "resources/runtime/onnxruntime_providers_shared.dll",
+      "bytes": 104960,
+      "sha256": "ddac3cc8c9c5fb1bda11cf66efb4a5ab7b3f1de31a9de0db08c785059f19325f"
+    },
+    {
+      "file": "resources/runtime/vcruntime140.dll",
+      "bytes": 124544,
+      "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066"
+    },
+    {
+      "file": "resources/runtime/vcruntime140_1.dll",
+      "bytes": 49792,
+      "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f"
+    },
+    {
+      "file": "集成手册.md",
+      "bytes": 32250,
+      "sha256": "dcb40c598a3bc7c40db4ac9c62d948c303ef3fcfa42e0aa0bdbcd00eef193763"
+    }
+  ],
+  "validation_summary": {
+    "passed_required_acceptance": true,
+    "release": "2026-10-01",
+    "rapid_dll_sha256": "6217d6f258e51575f2ba9a24bf6818a02222bbd502e42bd2d463ce4b2f46f367",
+    "gui_sha256": "d9d6cd031a88b253fb6851cc3aa00447f6d90f9d075d271e0b5d902ee674db05",
+    "batches": {
+      "native_auto": {
+        "passed": true,
+        "images": 198,
+        "seconds": 837.3054414999999,
+        "report": "_build/reports/intel-fix-20261001/intel/probe-reports/native-auto.json"
+      },
+      "native_cpu": {
+        "passed": true,
+        "images": 198,
+        "seconds": 1421.7891766,
+        "report": "_build/reports/intel-fix-20261001/intel/probe-reports/native-cpu.json"
+      },
+      "gui_auto": {
+        "passed": true,
+        "images": 198,
+        "seconds": 860.234694,
+        "report": "_build/reports/intel-fix-20261001/intel/probe-reports/gui-auto-batch.json"
+      },
+      "gui_cpu": {
+        "passed": true,
+        "images": 198,
+        "seconds": 1412.0190409,
+        "report": "_build/reports/intel-fix-20261001/intel/probe-reports/gui-cpu.json"
+      }
+    },
+    "total_full_batch_images": 792,
+    "model_pairs": {
+      "cpu": 9,
+      "amd_dml": 9,
+      "intel_dml": 9,
+      "cuda": 9
+    },
+    "actual_provider_profiling": "All 9 models on CPU, AMD DML, Intel DML compatibility and CUDA",
+    "memory_policy": "Automatic DXGI budget; CUDA also uses cudaMemGetInfo and matches LUID; Intel UMA automatically disables metacommands",
+    "growth_passed": {
+      "intel": {
+        "iterations": 1200,
+        "model": {
+          "backend": "dml",
+          "fallbacks": [
+            {
+              "backend": "cuda",
+              "reason": "Cannot load nvcuda.dll: Windows error 126"
+            }
+          ],
+          "gpu_memory": {
+            "adapter_device_id": 32081,
+            "adapter_luid": {
+              "high": 0,
+              "low": 62774
+            },
+            "adapter_vendor_id": 32902,
+            "available_bytes": 18467669483,
+            "budget_bytes": 18467669483,
+            "compatibility_reason": "Intel UMA compatibility: avoid dynamic-width metacommand resource growth",
+            "device_id": 0,
+            "disable_metacommands": true,
+            "node_index": 0,
+            "source": "dxgi",
+            "unified_memory": true,
+            "usage_bytes": 0
+          },
+          "id": "PP-OCRv6_rec_medium"
+        },
+        "passed": true,
+        "seconds": 49.8932719
+      },
+      "amd": {
+        "iterations": 1200,
+        "model": {
+          "backend": "dml",
+          "fallbacks": [],
+          "gpu_memory": {
+            "adapter_device_id": 26591,
+            "adapter_luid": {
+              "high": 0,
+              "low": 38683
+            },
+            "adapter_vendor_id": 4098,
+            "available_bytes": 7725731840,
+            "budget_bytes": 7725731840,
+            "device_id": 0,
+            "disable_metacommands": false,
+            "node_index": 0,
+            "source": "dxgi",
+            "unified_memory": false,
+            "usage_bytes": 0
+          },
+          "id": "PP-OCRv6_rec_medium"
+        },
+        "passed": true,
+        "seconds": 56.3385068
+      }
+    },
+    "cuda_required_report": "_build/reports/rapid-20261001-6fba6e59/probe-reports/required-acceptance.json",
+    "validation_limits": [
+      "Intel Arc 130T tested; other Intel UMA models/drivers not individually tested",
+      "CUDA 1200-iteration width stress not completed; 240 iterations confirmed, then stopped during repeated NVRTC compilation; not counted as passed",
+      "No old GUI access-violation dump; historical GUI and independent DLL crash codes differ",
+      "NVDA installed coordinate contract only; no live NVDA UI validation"
+    ],
+    "cleanup": "Recorded separately after remote report collection and deployment"
+  }
+}
