@@ -396,7 +396,24 @@ y521wan-coder 令牌）推送；**没有**新建或保存任何新的访问令�
 仓库排除：samples\private\、release\、RapidV6_OCR\、Tencent\、cache\、bin/obj、__pycache__、
   vendor 里的 CUDA/cuDNN 与 medium/small/large 模型（单文件超 GitHub 100 MB 限制）。
 
-本次上传核对结果（由第二次提交补记，见下方“核对记录”）。
+本次上传核对结果（2026-10-04，由第二次提交补记）
+  首次推送 HEAD（本地 = 远端 main）：01b5b2685e64407bee2d34f84af72fdada2bfe8c
+  提交数量：1 次（首次提交；项目此前没有 git 历史）
+  被 Git 跟踪的文件数量：270（远端文件树共 293 个条目 = 270 个文件 + 23 个目录对象）
+  正式版本标签：无（原因见上一段）
+  默认分支：main；可见性：public（已用 gh repo view 复核）
+  工作区状态：干净，本地 main 与 origin/main 完全一致
+  远端敏感文件检查：未发现 samples\private、.env、keystore、PEM/SSH 私钥、Token、
+    日志、数据库、构建缓存、临时文件或生产数据；仓库里唯一的可执行文件是
+    native\bin\WindowCapture.exe（运行必需，380 KB），二进制只有 RapidV6 的 CPU/tiny 子集与 4 个 ONNX 模型。
+  凭据与网络：复用 Windows 凭据管理器里**既有**的 GitHub CLI 令牌（没有新建、没有读取或输出令牌内容）；
+    本机直连 GitHub 推送会 Connection reset，已给本项目单独配置
+    .git\config 里的 http.proxy/https.proxy = socks5h://127.0.0.1:10808（v2rayN 本地代理）。
+    这个代理配置只在本机 .git\config 里，**不会进仓库**。
+  工具修复记录：git 的 github.com 凭据助手原本指向
+    C:\Users\apple007\Downloads\.codex-gh-portable\gh_2.97.0\bin\gh.exe，但该文件已被删除；
+    本次重新下载 GitHub CLI 2.97.0 便携版并放回同一路径，使该助手恢复可用（该目录不属于本项目，未纳入仓库）。
+  临时文件：提交信息临时文件 C:\Users\apple007\Downloads\commitmsg.txt 用完即删；无其它中转文件残留。
 
 ----------------------------------------------------------------
 十五、开发历史时间线（浓缩，完整旧记录见 git 提交里的旧版本思路与 docs\测试与验收矩阵.md）
